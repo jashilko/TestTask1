@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Test_Task.Models.Ticket>
+@{
+    ViewBag.Title = "Список заявок";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Номер</th>
+                    <th>Название</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Test_Task.Models.Ticket t in Model)
+                            {
+                    <tr>
+                        <td>@t.Id</td>
+                        <td>@t.Title</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
